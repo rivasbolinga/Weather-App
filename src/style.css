@@ -1,3 +1,50 @@
-.hello {
-  color: red;
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-input {
+  border: none;
+  border-bottom: 2px solid;
+  width: 200px;
+}
+
+button {
+  border: none;
+  background: none;
+  width: 40px;
+  cursor: pointer;
+}
+
+.main-weather {
+  border: 1px solid black;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.weather-text {
+  font-size: 30px;
+}
+
+.main-degrees {
+  font-size: 40px;
+}
+
+.other-info {
+  margin-top: 20px;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
 }
