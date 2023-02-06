@@ -1,5 +1,5 @@
 import './style.css';
-import displayData from './modules/api.js'
+import storeData from './modules/api.js'
 const key = '5157c507d51ade4731309623a34583e2';
 const form = document.querySelector('.form');
 const locationInput = document.querySelector('.location-input');
@@ -8,7 +8,7 @@ const getData = async (lat, lon) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`);
   const data = await response.json();
 
-  displayData(data);
+  storeData(data);
 };
 
 const getGeo = async (location) => {

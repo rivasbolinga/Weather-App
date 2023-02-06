@@ -1,13 +1,12 @@
 export default class Weather {
-  constructor(name,degrees,city,feel,humidity, precip, wind) 
+  constructor(name,description, degrees,feel,humidity,wind, precip) 
   {
     this.name = name;
+    this.description = description;
     this.degrees = degrees;
-    this.city = city;
     this.feel = feel;
     this.humidity = humidity;
+    this.wind = wind;
     this.precip = precip;
-    this.wind = wind
-
   }
 }
