@@ -1,20 +1,24 @@
-const weatherKind = document.querySelector('.weather-text');
-const degree = document.querySelector('.main-degrees');
-const cityName = document.querySelector('.main-location');
-import Weather from './weatherdata.js'
-import renderData from './render.js'
-const storeData = (data) => {
-console.log(data);
-const weatherArray  = data.weather;
-const mainObject = data.main;
-const windObj = data.wind;
-const { name } = data;
-const { main } = weatherArray[0];
-const { feels_like ,humidity, g ,temp,temp_min,temp_max} = mainObject;
-const {speed} = windObj;
-console.log(name,main,temp, humidity, speed);
-const newWeather = new Weather(name,main, temp, feels_like, humidity, speed);
-renderData(newWeather)
-}
-
-export default storeData;
+const form = document.querySelector('.form');
+const locationInput = document.querySelector('.location-input');
+import getData from './apiWeather.js'
+const searchBtn = document.querySelector('.search-btn')
+const getGeo = async (location) => {
+  const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=5157c507d51ade4731309623a34583e2`);
+  const data = await response.json();
+  const coordinates = data[0];
+ getData(coordinates);
+};
+form.addEventListener('submit', async (e) => {
+  searchBtn.disabled = true;
+  e.preventDefault();
+  const location = locationInput.value;
+  if (location) {
+    // remove spaces from the begining and end, and after or before a coma.
+    getGeo(location.trim().split(/\s*,\s*/).join('+'));
+    searchBtn.disabled = false;
+    form.reset();
+  } 
+  
+  return;
+});
+export default getGeo;
