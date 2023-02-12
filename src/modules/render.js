@@ -33,7 +33,7 @@ html2 += `<div class="weather-icon-container">
 </div>
 <div class="degree-container">
 <p class="main-degrees">${weather.degrees}°C</p>
-<p class="main-location">${weather.name}</p>
+<p class="main-location">${weather.name}, ${weather.country}</p>
 <p class="main-date">${today}</p>
 </div>`
 otherInfo.innerHTML = html;

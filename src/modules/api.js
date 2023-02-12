@@ -9,9 +9,12 @@ const getGeo = async (location) => {
   const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=5157c507d51ade4731309623a34583e2`);
   const data = await response.json();
   const coordinates = data[0];
-  getData(coordinates);
+  const city = data[0].name;
+  const country = data[0].country;
+  getData(coordinates,city, country);
+  
   getWeatherperHour(coordinates);
- return coordinates;
+ return coordinates, city, country;
 };
 
 const getInput = async (e) => {
