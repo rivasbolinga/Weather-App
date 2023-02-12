@@ -1,52 +1,66 @@
+import Days from './fivedays.js';
 const { parseISO, format } = require('date-fns');
 const hours = document.querySelector('.hours')
-//-- 3. Change time with date fns library
-const changeTime = (dateTimes) => {
-  const groupedByDate = dateTimes.reduce((result, dateTimeString) => {
-    const date = format(parseISO(dateTimeString), 'yyyy-MM-dd');
-    if (result[date]) {
-      result[date].push(dateTimeString);
-    } else {
-      result[date] = [dateTimeString];
-    }
-    return result;
-  }, {});
-  
-  takeDay(groupedByDate); // and object of arrays of the date with their hours
-}
-//-- 2. Loop to build an array with all the time data and take the temperature data.
-const getValuesperH = async (list) => {
-  let times = [];
-  for(let i = 0; i < list.length; i++)
- {
-  const { temp } = list[i].main;
-  const time = list[i].dt_txt;
-  times.push(time)
- }
- changeTime(times);
-}
 //--1. Async function to get the list of data from the API.
 const getFiveDaysWeather = async (coord) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${coord.lat}&lon=${coord.lon}&appid=5157c507d51ade4731309623a34583e2&units=metric`);
   const data = await response.json();
  const { list } = data;
- getValuesperH(list);
+ transformData(list);
 };
-//-- function to take the 5 next days of weather;
-const takeDay = (obj) => {
-  console.log(obj)
-  let days = Object.keys(obj);
-  return days;
-}
 
 
 
-const renderHourly = (time, temp) => {
-  let html = '' ;
-  html += `<div class="hour-container">
-  <p class="hour">${time}</p>
-  <p class="degrees">${temp}°C</p>
-</div>`;
-hours.innerHTML = html;
-}
+const transformData= (list) => {
+  const daysByWeekday = {}; // create an empty object to store days by weekday
+
+  list.forEach(hour => {
+    const { dt_txt } = hour;
+    const { main } = hour;
+    const { temp } = main;
+    const [fecha, hora] = dt_txt.split(' ');
+    const time = hora.slice(0,5);
+    const day = format(parseISO(fecha), 'iiii');
+    const newDay = new Days(day, time, temp);
+
+    // group newDay objects by weekday
+    if (daysByWeekday[day]) {
+      daysByWeekday[day].push(newDay);
+    } else {
+      daysByWeekday[day] = [newDay];
+    }
+  });
+
+  renderHours(daysByWeekday);
+};
+const renderHours = (days) => {
+  const dayNames = Object.keys(days);
+  dayNames.forEach((dayName) => {
+    const dayContainer = document.createElement('div');
+    dayContainer.classList.add('day-container');
+    dayContainer.textContent = dayName;
+
+    const dayData = days[dayName];
+    dayData.forEach(({ time, temp }) => {
+      const hourContainer = document.createElement('div');
+      hourContainer.classList.add('hour-container');
+
+      const timeElement = document.createElement('p');
+      timeElement.classList.add('time');
+      timeElement.textContent = time;
+      hourContainer.appendChild(timeElement);
+
+      const tempElement = document.createElement('p');
+      tempElement.classList.add('temp');
+      tempElement.textContent = temp;
+      hourContainer.appendChild(tempElement);
+
+      dayContainer.appendChild(hourContainer);
+    });
+
+    hours.appendChild(dayContainer);
+  });
+};
+
+
 export default getFiveDaysWeather;
