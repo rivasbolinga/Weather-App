@@ -1,7 +1,6 @@
 import Days from './fivedays.js';
 
-const { parseISO, format } = require('date-fns');
-
+const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hours = document.querySelector('.hours');
 // -- 3. Render all the data
 const renderHours = (days) => {

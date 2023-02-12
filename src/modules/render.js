@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { format } from 'date-fns'; // eslint-disable-line
 
 const today = format(new Date(), 'dd/MM/yyyy');
 const otherInfo = document.querySelector('.other-info');

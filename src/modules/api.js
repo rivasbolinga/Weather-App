@@ -1,5 +1,5 @@
 import getData from './apiWeather.js';
-import getFiveDaysWeather from './apihourly';
+import getFiveDaysWeather from './apihourly.js';
 
 const form = document.querySelector('.form');
 const locationInput = document.querySelector('.location-input');
