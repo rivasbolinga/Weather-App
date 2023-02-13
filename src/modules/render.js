@@ -18,9 +18,7 @@ const renderData = async (weather) => {
 <p class="other-info-number">${weather.humidity}%</p>
 </div>
 <div class="precipitations container">
-<div class="other-info-icon">${weather.icon}</div>
-<p class="other-info-title">Precipitations</p>
-<p class="other-info-number">0%</p>
+<img class="icon-small" src="https://openweathermap.org/img/wn/${weather.icon}@2x.png">
 </div>
 <div class="wind-speed container">
 <div class="other-info-icon"></div>
@@ -28,7 +26,9 @@ const renderData = async (weather) => {
 <p class="other-info-number">${weather.wind} km/h</p>
 </div>`;
   html2 += `<div class="weather-icon-container">
-<div class="weather-icon"></div>
+<div class="weather-icon">
+<img src="https://openweathermap.org/img/wn/${weather.icon}@2x.png">
+</div>
 <p class="weather-text">${weather.description}</p>
 </div>
 <div class="degree-container">

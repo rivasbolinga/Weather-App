@@ -10,6 +10,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('./modules/img/taylor-van-riper-yQorCngxzwI-unsplash.jpg');
 }
 
 .location-input {
@@ -26,11 +27,23 @@ button {
 }
 
 .main-weather {
-  border: 1px solid black;
+  width: 300px;
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  text-align: center;
 }
+
+.weather-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+  gap: 20px;
+}
+
 
 .weather-text {
   font-size: 30px;
@@ -40,11 +53,25 @@ button {
   font-size: 40px;
 }
 
-.other-info {
+.degree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end;
+  justify-content: end;
+  justify-items: end;
   margin-top: 20px;
-  border: 1px solid red;
+}
+
+.other-info {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-small {
+  width: 60px;
 }
