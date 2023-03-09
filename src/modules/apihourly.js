@@ -1,35 +1,45 @@
 import Days from './fivedays.js';
 
 const { parseISO, format } = require('date-fns'); // eslint-disable-line
-const hours = document.querySelector('.hours');
+const hoursSection = document.querySelector('.hour-section');
 // -- 3. Render all the data
-const renderHours = (days) => {
-  const dayNames = Object.keys(days);
-  dayNames.forEach((dayName) => {
-    const dayContainer = document.createElement('div');
-    dayContainer.classList.add('day-container');
-    dayContainer.textContent = dayName;
+ const renderHours = (days) => {
+  console.log(days)
+  
+for(let [key, value] of Object.values(days)) {
+  const day = value.day;
+  console.log(day)
+  let html = '';
+  html += `
+  <h2>{value.day}</h2>
+  `;
+  hoursSection.innerHTML = html;
+}
+  
+//   dayNames.forEach((dayName) => {
+//     const dayContainer = document.createElement('div');
+//     dayContainer.classList.add('day-container');
+//     dayContainer.textContent = dayName;
+//     const dayData = days[dayName];
+//     dayData.forEach(({ time, temp }) => {
+//       const hourContainer = document.createElement('div');
+//       hourContainer.classList.add('hour-container');
 
-    const dayData = days[dayName];
-    dayData.forEach(({ time, temp }) => {
-      const hourContainer = document.createElement('div');
-      hourContainer.classList.add('hour-container');
+//       const timeElement = document.createElement('p');
+//       timeElement.classList.add('time');
+//       timeElement.textContent = time;
+//       hourContainer.appendChild(timeElement);
 
-      const timeElement = document.createElement('p');
-      timeElement.classList.add('time');
-      timeElement.textContent = time;
-      hourContainer.appendChild(timeElement);
+//       const tempElement = document.createElement('p');
+//       tempElement.classList.add('temp');
+//       tempElement.textContent = temp;
+//       hourContainer.appendChild(tempElement);
 
-      const tempElement = document.createElement('p');
-      tempElement.classList.add('temp');
-      tempElement.textContent = temp;
-      hourContainer.appendChild(tempElement);
+//       dayContainer.appendChild(hourContainer);
+//     });
 
-      dayContainer.appendChild(hourContainer);
-    });
-
-    hours.appendChild(dayContainer);
-  });
+//     hours.appendChild(dayContainer);
+//   });
 };
 // --2. transform the string received to display it later
 const transformData = (list) => {

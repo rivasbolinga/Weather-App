@@ -1,22 +1,50 @@
-p,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@100;400&family=Roboto:wght@300;700&display=swap');
+
+p {
   margin: 0;
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+   background-image: url('./modules/img/pexels-eberhard-grossgasteiger-2310713.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form {
+  width: 260px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.347);
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
 main {
   display: flex;
   padding-top: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./modules/img/taylor-van-riper-yQorCngxzwI-unsplash.jpg');
 }
 
 .location-input {
   border: none;
-  border-bottom: 2px solid;
+  background-color: none;
+  background: none;
+  color: rgb(0, 0, 0);
   width: 200px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.location-input::placeholder {
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;
+   border-bottom: 1px solid rgb(255, 255, 255);
+   font-size: 20px;
+  
 }
 
 button {
@@ -24,6 +52,7 @@ button {
   background: none;
   width: 40px;
   cursor: pointer;
+  color: white;
 }
 
 .main-weather {
@@ -41,7 +70,7 @@ button {
   align-items: center;
   width: 150px;
   text-align: center;
-  gap: 20px;
+
 }
 
 
@@ -57,19 +86,21 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: end;
-  justify-content: end;
-  justify-items: end;
-  margin-top: 20px;
+ 
 }
 
 .other-info {
-  margin-top: 40px;
+  margin-top: 20px;
+  width: 260px;
+  background-color: rgba(255, 255, 255, 0.347);
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .icon-small {
