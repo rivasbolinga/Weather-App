@@ -106,3 +106,37 @@ button {
 .icon-small {
   width: 60px;
 }
+
+.div-number {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.div-temp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.div-time {
+display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.4px solid white;
+  padding-bottom: 20px;
+}
+
+.hour-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
