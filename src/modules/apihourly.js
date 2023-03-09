@@ -4,43 +4,31 @@ const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hoursSection = document.querySelector('.hour-section');
 // -- 3. Render all the data
  const renderHours = (days) => {
-  console.log(days)
-  
-for(let [key, value] of Object.values(days)) {
-  const day = value.day;
-  console.log(day)
-  let html = '';
-  html += `
-  <h2>{value.day}</h2>
-  `;
-  hoursSection.innerHTML = html;
-}
-  
-//   dayNames.forEach((dayName) => {
-//     const dayContainer = document.createElement('div');
-//     dayContainer.classList.add('day-container');
-//     dayContainer.textContent = dayName;
-//     const dayData = days[dayName];
-//     dayData.forEach(({ time, temp }) => {
-//       const hourContainer = document.createElement('div');
-//       hourContainer.classList.add('hour-container');
+    for (const [day, values] of Object.entries(days)) {
+      // create a new div for each day
+      const dayDiv = document.createElement('div');
+      dayDiv.classList.add('day');
 
-//       const timeElement = document.createElement('p');
-//       timeElement.classList.add('time');
-//       timeElement.textContent = time;
-//       hourContainer.appendChild(timeElement);
+      // create a heading for the day
+      const dayHeading = document.createElement('h2');
+      dayHeading.textContent = day;
+      dayDiv.appendChild(dayHeading);
 
-//       const tempElement = document.createElement('p');
-//       tempElement.classList.add('temp');
-//       tempElement.textContent = temp;
-//       hourContainer.appendChild(tempElement);
+      // iterate over the values for the day and display them
+      for (const value of values) {
+        const tempParagraph = document.createElement('p');
+        tempParagraph.textContent = `Temperature: ${value.temp}`;
+        dayDiv.appendChild(tempParagraph);
 
-//       dayContainer.appendChild(hourContainer);
-//     });
+        const timeParagraph = document.createElement('p');
+        timeParagraph.textContent = `Time: ${value.time}`;
+        dayDiv.appendChild(timeParagraph);
+      }
 
-//     hours.appendChild(dayContainer);
-//   });
-};
+      // add the day div to the document
+      document.body.appendChild(dayDiv);
+    }
+  }
 // --2. transform the string received to display it later
 const transformData = (list) => {
   const daysByWeekday = {}; // create an empty object to store days by weekday
