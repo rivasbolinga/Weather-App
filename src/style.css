@@ -69,7 +69,12 @@ button {
   justify-content: center;
   align-items: center;
   width: 150px;
+  gap: 10px;
   text-align: center;
+}
+
+.weather-icon {
+  width: 100px;
 }
 
 .weather-text {
@@ -108,19 +113,25 @@ button {
 .div-number {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 20px;
 }
 
 .div-temp {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .div-time {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+.div-img {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
 .day {
@@ -131,6 +142,10 @@ button {
   align-items: center;
   border-bottom: 0.4px solid white;
   padding-bottom: 20px;
+}
+.icon-hour {
+  width: 25px;
+  color: white
 }
 
 .hour-section {
@@ -151,11 +166,19 @@ button {
 .day {
   width: 120px;
   border-right: 0.4px solid white;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .div-number {
-  gap: 10px;
+  gap: 5px;
+}
+
+.div-img {
+  gap: 17px;
+}
+
+.icon-hour {
+  width: 18px;
 }
 
 .day-name {
@@ -168,20 +191,28 @@ button {
   align-items: center;
   padding: 30px 0 0 0;
   margin: 0;
+  gap: 20px;
 }
 
 .day {
-  width: 140px;
+  width: 150px;
   border-right: 0.4px solid white;
   font-size: 16px;
 }
 
 .div-number {
-  gap: 30px;
+  gap: 14px;
 }
 
 .day-name {
   font-size: 22px;
+}
+.div-img {
+  gap: 18px;
+}
+
+.icon-hour {
+  width: 21px;
 }
   @media only screen and (min-width: 1400px){
   .hour-section {

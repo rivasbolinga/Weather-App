@@ -1,13 +1,12 @@
 
 import Days from './fivedays.js';
+import iconsProcessor from './icons.js';
 
 const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hoursSection = document.querySelector('.hour-section')
 // -- 3. Render all the data
-const renderHours = (days, icon) => {
+const renderHours = (days) => {
   for (const [day, values] of Object.entries(days)) {
-    // create a new div for each day
-    
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
     hoursSection.appendChild(dayDiv);
@@ -22,18 +21,23 @@ const renderHours = (days, icon) => {
     const divTemp = document.createElement('div');
     divTemp.classList.add('div-temp');
     divNumber.appendChild(divTemp);
+    const divImg = document.createElement("div");
+    divImg.classList.add("div-img");
+    divNumber.appendChild(divImg);
     const divTime = document.createElement('div');
     divTime.classList.add('div-time');
     divNumber.appendChild(divTime);
-
+    
     // iterate over the values for the day and display them
     for (const value of values) {
+      const icon = iconsProcessor(value.icon)
       const tempParagraph = document.createElement('p');
       tempParagraph.textContent = `${value.temp}°C`;
       divTemp.appendChild(tempParagraph);
       const iconDiv = document.createElement("img");
-      iconDiv.src = `https://openweathermap.org/img/wn/${value.icon}@2x.png`;
-      divTemp.appendChild(iconDiv);
+      iconDiv.classList.add('icon-hour')
+      iconDiv.src = icon;
+      divImg.appendChild(iconDiv);
 
       const timeParagraph = document.createElement('p');
       timeParagraph.textContent = `${value.time}`;

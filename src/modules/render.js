@@ -1,10 +1,12 @@
 import { format } from 'date-fns'; // eslint-disable-line
+import iconsProcessor from './icons';
 
 const today = format(new Date(), 'dd/MM/yyyy');
 const otherInfo = document.querySelector('.other-info');
 const mainWeather = document.querySelector('.main-weather');
 
 const renderData = async (weather) => {
+  const icon = iconsProcessor(weather.icon);
   let html = '';
   let html2 = '';
   html += `<div class="feels-like container">
@@ -18,7 +20,7 @@ const renderData = async (weather) => {
 <p class="other-info-number">${weather.humidity}%</p>
 </div>
 <div class="precipitations container">
-<img class="icon-small" src="https://openweathermap.org/img/wn/${weather.icon}@2x.png">
+<img class="icon-small" src="${icon}">
 </div>
 <div class="wind-speed container">
 <div class="other-info-icon"></div>
@@ -26,9 +28,7 @@ const renderData = async (weather) => {
 <p class="other-info-number">${weather.wind} km/h</p>
 </div>`;
   html2 += `<div class="weather-icon-container">
-<div class="weather-icon">
-<img src="https://openweathermap.org/img/wn/${weather.icon}@2x.png">
-</div>
+<img class="weather-icon" src="${icon}">
 <p class="weather-text">${weather.description}</p>
 </div>
 <div class="degree-container">
