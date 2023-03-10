@@ -4,7 +4,7 @@ import Days from './fivedays.js';
 const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hoursSection = document.querySelector('.hour-section')
 // -- 3. Render all the data
-const renderHours = (days) => {
+const renderHours = (days, icon) => {
   for (const [day, values] of Object.entries(days)) {
     // create a new div for each day
     
@@ -31,6 +31,9 @@ const renderHours = (days) => {
       const tempParagraph = document.createElement('p');
       tempParagraph.textContent = `${value.temp}°C`;
       divTemp.appendChild(tempParagraph);
+      const iconDiv = document.createElement("img");
+      iconDiv.src = `https://openweathermap.org/img/wn/${value.icon}@2x.png`;
+      divTemp.appendChild(iconDiv);
 
       const timeParagraph = document.createElement('p');
       timeParagraph.textContent = `${value.time}`;
@@ -46,10 +49,14 @@ const transformData = (list) => {
     const { dt_txt: dtTxt } = hour;
     const { main } = hour;
     const { temp } = main;
+    const {weather} = hour;
+    const icon = weather[0].icon;
+    console.log(icon)
     const [fecha, hora] = dtTxt.split(' ');
     const time = hora.slice(0, 5);
     const day = format(parseISO(fecha), 'iiii');
-    const newDay = new Days(day, time, temp);
+    const newDay = new Days(day, time, temp, icon);
+    console.log(newDay)
     // group newDay objects by weekday
     if (daysByWeekday[day]) {
       daysByWeekday[day].push(newDay);
@@ -64,6 +71,7 @@ const getFiveDaysWeather = async (coord) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${coord.lat}&lon=${coord.lon}&appid=5157c507d51ade4731309623a34583e2&units=metric`);
   const data = await response.json();
   const { list } = data;
+
   transformData(list);
 };
 
