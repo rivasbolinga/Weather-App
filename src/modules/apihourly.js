@@ -13,6 +13,7 @@ const renderHours = (days) => {
     hoursSection.appendChild(dayDiv);
     // create a heading for the day
     const dayHeading = document.createElement('h2');
+    dayHeading.classList.add('day-name');
     dayHeading.textContent = day;
     dayDiv.appendChild(dayHeading);
     const divNumber = document.createElement('div');
@@ -36,8 +37,6 @@ const renderHours = (days) => {
       divTime.appendChild(timeParagraph);
     }
 
-    // add the day div to the document
-    document.body.appendChild(dayDiv);
   }
 };
 // --2. transform the string received to display it later
