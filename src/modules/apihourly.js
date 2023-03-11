@@ -1,12 +1,11 @@
-
 import Days from './fivedays.js';
 import iconsProcessor from './icons.js';
 
 const { parseISO, format } = require('date-fns'); // eslint-disable-line
-const hoursSection = document.querySelector('.hour-section')
+const hoursSection = document.querySelector('.hour-section');
 // -- 3. Render all the data
 const renderHours = (days) => {
-   hoursSection.innerHTML = "";
+  hoursSection.innerHTML = '';
   for (const [day, values] of Object.entries(days)) {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
@@ -22,29 +21,28 @@ const renderHours = (days) => {
     const divTemp = document.createElement('div');
     divTemp.classList.add('div-temp');
     divNumber.appendChild(divTemp);
-    const divImg = document.createElement("div");
-    divImg.classList.add("div-img");
+    const divImg = document.createElement('div');
+    divImg.classList.add('div-img');
     divNumber.appendChild(divImg);
     const divTime = document.createElement('div');
     divTime.classList.add('div-time');
     divNumber.appendChild(divTime);
-    
+
     // iterate over the values for the day and display them
-    for (const value of values) {
-      const icon = iconsProcessor(value.icon)
+    values.forEach((value) => {
+      const icon = iconsProcessor(value.icon);
       const tempParagraph = document.createElement('p');
       tempParagraph.textContent = `${value.temp}°C`;
       divTemp.appendChild(tempParagraph);
-      const iconDiv = document.createElement("img");
-      iconDiv.classList.add('icon-hour')
+      const iconDiv = document.createElement('img');
+      iconDiv.classList.add('icon-hour');
       iconDiv.src = icon;
       divImg.appendChild(iconDiv);
 
       const timeParagraph = document.createElement('p');
       timeParagraph.textContent = `${value.time}`;
       divTime.appendChild(timeParagraph);
-    }
-
+    });
   }
 };
 // --2. transform the string received to display it later
@@ -54,8 +52,8 @@ const transformData = (list) => {
     const { dt_txt: dtTxt } = hour;
     const { main } = hour;
     const { temp } = main;
-    const {weather} = hour;
-    const icon = weather[0].icon;
+    const { weather } = hour;
+    const { icon } = weather[0];
     const [fecha, hora] = dtTxt.split(' ');
     const time = hora.slice(0, 5);
     const day = format(parseISO(fecha), 'iiii');

@@ -1,6 +1,7 @@
 import { format } from 'date-fns'; // eslint-disable-line
-import iconsProcessor from './icons';
-import pictureProcessor from './pictures'
+import iconsProcessor from './icons.js';
+import pictureProcessor from './pictures.js';
+
 const today = format(new Date(), 'dd/MM/yyyy');
 const otherInfo = document.querySelector('.other-info');
 const mainWeather = document.querySelector('.main-weather');

@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 .sunny {
   background-image: url('./modules/img/01d.jpg');
 }
@@ -54,6 +53,7 @@ body {
 .night {
   background-image: url('./modules/img/01n.jpg');
 }
+
 .rain-night {
   background-image: url('./modules/img/09n.jpg');
 }
@@ -68,7 +68,7 @@ body {
 
 .snow-night {
   background-image: url('./modules/img/13n.jpg');
-} 
+}
 
 .wind-night {
   background-image: url('./modules/img/50n.jpg');
@@ -157,7 +157,7 @@ button {
 .other-info {
   margin-top: 20px;
   width: 260px;
-  background-color: rgba(255, 255, 255, 0.347);
+  background-color: rgba(255, 255, 255, 0.473);
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -206,9 +206,10 @@ button {
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.529);
 }
+
 .icon-hour {
   width: 25px;
-  color: white
+  color: white;
 }
 
 .hour-section {
@@ -217,112 +218,114 @@ button {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (min-width: 768px) {
   .hour-section {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-}
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
 
-.day {
-  width: 120px;
-  border-right: 0.4px solid white;
-  font-size: 13px;
-  padding: 10px 0 20px 0;
-}
+  .day {
+    width: 120px;
+    border-right: 0.4px solid white;
+    font-size: 13px;
+    padding: 10px 0 20px 0;
+  }
 
-.div-number {
-  gap: 5px;
-}
+  .div-number {
+    gap: 5px;
+  }
 
-.div-img {
-  gap: 17px;
-}
+  .div-img {
+    gap: 17px;
+  }
 
-.icon-hour {
-  width: 18px;
-}
+  .icon-hour {
+    width: 18px;
+  }
 
-.day-name {
-  font-size: 18px;
-}
+  .day-name {
+    font-size: 18px;
+  }
 
+  .other-info {
+    margin-top: 40px;
+    width: 460px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.53);
+    border-radius: 10px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-.other-info {
-  margin-top: 40px;
-  width: 460px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.53);
-  border-radius: 10px;
-  border: 1px solid white;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: none;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  @media only screen and (min-width: 1000px) {
+    .hour-section {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0 0 0;
+      margin: 0;
+      gap: 20px;
+    }
 
-@media only screen and (min-width: 1000px){
-  .hour-section {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0 0 0;
-  margin: 0;
-  gap: 20px;
-}
+    .day {
+      width: 150px;
+      border-right: 0.4px solid white;
+      font-size: 16px;
+    }
 
-.day {
-  width: 150px;
-  border-right: 0.4px solid white;
-  font-size: 16px;
-}
+    .div-number {
+      gap: 14px;
+    }
 
-.div-number {
-  gap: 14px;
-}
+    .day-name {
+      font-size: 22px;
+    }
 
-.day-name {
-  font-size: 22px;
-}
-.div-img {
-  gap: 18px;
-}
+    .div-img {
+      gap: 18px;
+    }
 
-.icon-hour {
-  width: 21px;
-}
-  @media only screen and (min-width: 1400px){
-  .hour-section {
-  padding: 60px 0 0 0;
-  gap: 10px
+    .icon-hour {
+      width: 21px;
+    }
 
-}
+    @media only screen and (min-width: 1400px) {
+      .hour-section {
+        padding: 60px 0 0 0;
+        gap: 10px;
+      }
 
-.day {
-  width: 200px;
-  font-size: 20px;
-}
+      .day {
+        width: 200px;
+        font-size: 20px;
+      }
 
-.div-number {
-  gap: 20px;
-}
+      .div-number {
+        gap: 20px;
+      }
 
-.day-name {
-  font-size: 26px;
-}
-.div-img {
-  gap: 19px;
-}
+      .day-name {
+        font-size: 26px;
+      }
 
-.icon-hour {
-  width: 24px;
-}
-}
-}
+      .div-img {
+        gap: 19px;
+      }
+
+      .icon-hour {
+        width: 24px;
+      }
+    }
+  }
 }
