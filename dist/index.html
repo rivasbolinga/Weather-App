@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Weather</title>
+    <script src="https://kit.fontawesome.com/713945395b.js" crossorigin="anonymous"></script>
 
-    <link rel = "icon" href ="https://www.clipartmax.com/middle/m2H7Z5i8i8K9H7m2_weather-stroke-symbol-svg-png-icon-free-sunny-symbol/"
-            type = "image/x-icon">
+    <title>Your Weather App</title>
 <script defer src="main.js"></script></head>
 <body>
-
+    <main>
+      <form class="form">
+        <input
+        class="location-input"
+        required
+        type="text"
+        placeholder="Where in the world?"
+        maxlength="20"
+        >
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="main-weather"></div>
+      <div class="other-info"></div>
+      <div class="hour-section"></div>
+    </main>
 </body>
 </html>

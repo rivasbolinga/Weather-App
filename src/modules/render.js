@@ -7,6 +7,8 @@ const otherInfo = document.querySelector('.other-info');
 const mainWeather = document.querySelector('.main-weather');
 
 const renderData = async (weather) => {
+  otherInfo.style.display = 'grid';
+  mainWeather.style.display = 'flex';
   const icon = iconsProcessor(weather.icon);
   pictureProcessor(weather.icon);
   let html = '';

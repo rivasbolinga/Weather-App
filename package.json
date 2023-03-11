@@ -1,12 +1,15 @@
 {
   "name": "weather-app",
+  "homepage": "https://rivasbolinga.github.io/Weather-App",
   "version": "1.0.0",
   "description": "This is a weather forecast site using a weather API, where you can check the weather of your location.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
