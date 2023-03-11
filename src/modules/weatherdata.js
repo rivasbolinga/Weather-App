@@ -1,5 +1,5 @@
 export default class Weather {
-  constructor(name, country, description, degrees, feel, humidity, wind, precip, icon) {
+  constructor(name, country, description, degrees, feel, humidity, wind, icon) {
     this.name = name;
     this.country = country;
     this.description = description;
@@ -7,7 +7,6 @@ export default class Weather {
     this.feel = feel;
     this.humidity = humidity;
     this.wind = wind;
-    this.precip = precip;
     this.icon = icon;
   }
 }

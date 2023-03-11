@@ -21,6 +21,8 @@
   "homepage": "https://github.com/rivasbolinga/Weather-App#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "date-fns": "^2.29.3",
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21"
   }
 }
