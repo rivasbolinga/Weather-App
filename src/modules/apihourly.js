@@ -6,6 +6,7 @@ const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hoursSection = document.querySelector('.hour-section')
 // -- 3. Render all the data
 const renderHours = (days) => {
+   hoursSection.innerHTML = "";
   for (const [day, values] of Object.entries(days)) {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
@@ -55,12 +56,10 @@ const transformData = (list) => {
     const { temp } = main;
     const {weather} = hour;
     const icon = weather[0].icon;
-    console.log(icon)
     const [fecha, hora] = dtTxt.split(' ');
     const time = hora.slice(0, 5);
     const day = format(parseISO(fecha), 'iiii');
     const newDay = new Days(day, time, temp, icon);
-    console.log(newDay)
     // group newDay objects by weekday
     if (daysByWeekday[day]) {
       daysByWeekday[day].push(newDay);

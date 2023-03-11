@@ -14,6 +14,66 @@ body {
   background-repeat: no-repeat;
 }
 
+
+.sunny {
+  background-image: url('./modules/img/01d.jpg');
+}
+
+.clouds {
+  background-image: url('./modules/img/02d.jpg');
+}
+
+.cloudy {
+  background-image: url('./modules/img/03d.jpg');
+}
+
+.grey {
+  background-image: url('./modules/img/04d.jpg');
+}
+
+.rain {
+  background-image: url('./modules/img/09d.jpg');
+}
+
+.rain-sun {
+  background-image: url('./modules/img/10d.jpg');
+}
+
+.storm {
+  background-image: url('./modules/img/11d.jpg');
+}
+
+.snow {
+  background-image: url('./modules/img/13d.jpg');
+}
+
+.wind {
+  background-image: url('./modules/img/50d.jpg');
+}
+
+.night {
+  background-image: url('./modules/img/01n.jpg');
+}
+.rain-night {
+  background-image: url('./modules/img/09n.jpg');
+}
+
+.rainy-night {
+  background-image: url('./modules/img/10n.jpg');
+}
+
+.storm-night {
+  background-image: url('./modules/img/11n.jpg');
+}
+
+.snow-night {
+  background-image: url('./modules/img/13n.jpg');
+} 
+
+.wind-night {
+  background-image: url('./modules/img/50n.jpg');
+}
+
 .form {
   width: 260px;
   height: 80px;
@@ -61,6 +121,8 @@ button {
   gap: 20px;
   margin-top: 20px;
   text-align: center;
+  background-color: rgba(249, 249, 249, 0.71);
+  border-radius: 10px;
 }
 
 .weather-icon-container {
@@ -140,8 +202,9 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 0.4px solid white;
-  padding-bottom: 20px;
+  border-radius: 20px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.529);
 }
 .icon-hour {
   width: 25px;
@@ -159,6 +222,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   padding: 0;
   margin: 0;
 }
@@ -167,6 +231,7 @@ button {
   width: 120px;
   border-right: 0.4px solid white;
   font-size: 13px;
+  padding: 10px 0 20px 0;
 }
 
 .div-number {
@@ -184,6 +249,24 @@ button {
 .day-name {
   font-size: 18px;
 }
+
+
+.other-info {
+  margin-top: 40px;
+  width: 460px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.53);
+  border-radius: 10px;
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: none;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 @media only screen and (min-width: 1000px){
   .hour-section {
   flex-direction: row;
@@ -222,16 +305,23 @@ button {
 }
 
 .day {
-  width: 180px;
+  width: 200px;
   font-size: 20px;
 }
 
 .div-number {
-  gap: 50px;
+  gap: 20px;
 }
 
 .day-name {
   font-size: 26px;
+}
+.div-img {
+  gap: 19px;
+}
+
+.icon-hour {
+  width: 24px;
 }
 }
 }

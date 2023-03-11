@@ -1,12 +1,13 @@
 import { format } from 'date-fns'; // eslint-disable-line
 import iconsProcessor from './icons';
-
+import pictureProcessor from './pictures'
 const today = format(new Date(), 'dd/MM/yyyy');
 const otherInfo = document.querySelector('.other-info');
 const mainWeather = document.querySelector('.main-weather');
 
 const renderData = async (weather) => {
   const icon = iconsProcessor(weather.icon);
+  pictureProcessor(weather.icon);
   let html = '';
   let html2 = '';
   html += `<div class="feels-like container">
