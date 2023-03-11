@@ -217,6 +217,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) {

@@ -6,7 +6,7 @@ const hoursSection = document.querySelector('.hour-section');
 // -- 3. Render all the data
 const renderHours = (days) => {
   hoursSection.innerHTML = '';
-  for (const [day, values] of Object.entries(days)) {
+  Object.entries(days).forEach(([day, values]) => {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
     hoursSection.appendChild(dayDiv);
@@ -43,7 +43,7 @@ const renderHours = (days) => {
       timeParagraph.textContent = `${value.time}`;
       divTime.appendChild(timeParagraph);
     });
-  }
+  });
 };
 // --2. transform the string received to display it later
 const transformData = (list) => {
