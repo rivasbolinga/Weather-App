@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@100;400&family=Roboto:wght@300;700&display=swap');
 
-p {
+p,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -78,7 +80,7 @@ body {
 .form {
   width: 260px;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.496);
+  background-color: rgba(255, 255, 255, 0.677);
   display: flex;
   justify-content: center;
   border-radius: 10px;
@@ -124,7 +126,7 @@ button {
   text-align: center;
   background-color: rgba(249, 249, 249, 0.71);
   border-radius: 10px;
-  padding: 20px 0 20px 0;
+  padding: 20px 3px 20px 3px;
 }
 
 .weather-icon-container {
@@ -139,6 +141,7 @@ button {
 
 .other-info-icon {
   font-size: 20px;
+  margin-bottom: 3px;
 }
 
 .weather-icon {
@@ -164,7 +167,7 @@ button {
   display: none;
   margin-top: 30px;
   width: 260px;
-  background-color: rgba(255, 255, 255, 0.473);
+  background-color: rgba(255, 255, 255, 0.703);
   border-radius: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -180,10 +183,11 @@ button {
 }
 
 .div-number {
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
   gap: 20px;
-  border-bottom: 0.5ps solid rgba(255, 255, 255, 0.506);
+  border-bottom: 0.5ps solid rgba(255, 255, 255, 0.685);
 }
 
 .div-temp {
@@ -211,8 +215,8 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.529);
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.834);
 }
 
 .icon-hour {
@@ -265,7 +269,7 @@ button {
     margin-top: 40px;
     width: 460px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.53);
+    background-color: rgba(255, 255, 255, 0.723);
     border-radius: 10px;
     border: 1px solid white;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -283,13 +287,14 @@ button {
       align-items: center;
       padding: 30px 0 0 0;
       margin: 60px 0 60px 0;
-      gap: 20px;
+      gap: 10px;
     }
 
     .day {
       width: 150px;
       border-right: 0.4px solid white;
       font-size: 16px;
+      padding: 20px 4px 20px 4px;
     }
 
     .div-number {
@@ -318,6 +323,7 @@ button {
       .day {
         width: 200px;
         font-size: 20px;
+        padding: 20px 10px 20px 10px;
       }
 
       .div-number {
