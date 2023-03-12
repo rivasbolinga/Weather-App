@@ -118,6 +118,17 @@ button {
   color: white;
 }
 
+#slide-button {
+  display: none;
+  width: 70px;
+  flex-direction: row;
+  gap: 10px;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin: 20px 0 0 90px;
+}
+
 .main-weather {
   width: 300px;
   display: none;
@@ -187,7 +198,6 @@ button {
   display: flex;
   flex-direction: row-reverse;
   gap: 20px;
-  border-bottom: 0.5ps solid rgba(255, 255, 255, 0.685);
 }
 
 .div-temp {
@@ -209,14 +219,22 @@ button {
 }
 
 .day {
-  margin-top: 20px;
-  display: flex;
+  margin-top: 9px;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.834);
+}
+
+.day:not(:first-of-type) {
+  display: none;
+}
+
+.day.active {
+  display: flex;
 }
 
 .icon-hour {
