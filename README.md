@@ -1,15 +1,18 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/103900838/220873904-932bf986-340f-478f-9fca-4d840c6a47df.png"
-alt="logo" width="140"  height="auto"  />
-  <br/>
 
 
-# 📖 [Wheather App] <a name="about-project"></a>
+![all-devices-black](https://user-images.githubusercontent.com/103900838/224566245-7a289527-c213-4bda-9a84-8a3a67bf9353.png)
+
+
+
+# 🌞 [ Wheather App ] <a name="about-project"></a>
 
  <a name="about-project"></a>
 
 <!-- PROJECT DESCRIPTION -->
-**[Weather app]** is a website built vanilla JS where you can find the weather of your city through the API OpenWeather. https://openweathermap.org/api
+**[Weather app]** is a website built vanilla JS where you can find the weather of your city through the API  
+[OpenWeather](https://openweathermap.org/api)
+
 </div>
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -42,7 +45,7 @@ alt="logo" width="140"  height="auto"  />
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can see the live version here: [👉🏼](https://rivasbolinga.github.io/Weather-App/)
+You can see the live version [here](https://rivasbolinga.github.io/Weather-App/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
