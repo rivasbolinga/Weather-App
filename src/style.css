@@ -12,67 +12,67 @@ body {
   background-image: url('./modules/img/pexels-eberhard-grossgasteiger-2310713.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 1000px;
+  min-height: 800px;
 }
 
 .sunny {
-  background-image: url('./modules/img/01d.jpg');
+  background-image: url('./modules/img/01d.jpeg');
 }
 
 .clouds {
-  background-image: url('./modules/img/02d.jpg');
+  background-image: url('./modules/img/02d.jpeg');
 }
 
 .cloudy {
-  background-image: url('./modules/img/03d.jpg');
+  background-image: url('./modules/img/03d.jpeg');
 }
 
 .grey {
-  background-image: url('./modules/img/04d.jpg');
+  background-image: url('./modules/img/04d.jpeg');
 }
 
 .rain {
-  background-image: url('./modules/img/09d.jpg');
+  background-image: url('./modules/img/09d.jpeg');
 }
 
 .rain-sun {
-  background-image: url('./modules/img/10d.jpg');
+  background-image: url('./modules/img/10d.jpeg');
 }
 
 .storm {
-  background-image: url('./modules/img/11d.jpg');
+  background-image: url('./modules/img/11d.jpeg');
 }
 
 .snow {
-  background-image: url('./modules/img/13d.jpg');
+  background-image: url('./modules/img/13d.jpeg');
 }
 
 .wind {
-  background-image: url('./modules/img/50d.jpg');
+  background-image: url('./modules/img/50d.jpeg');
 }
 
 .night {
-  background-image: url('./modules/img/01n.jpg');
+  background-image: url('./modules/img/01n.jpeg');
 }
 
 .rain-night {
-  background-image: url('./modules/img/09n.jpg');
+  background-image: url('./modules/img/09n.jpeg');
 }
 
 .rainy-night {
-  background-image: url('./modules/img/10n.jpg');
+  background-image: url('./modules/img/10n.jpeg');
 }
 
 .storm-night {
-  background-image: url('./modules/img/11n.jpg');
+  background-image: url('./modules/img/11n.jpeg');
 }
 
 .snow-night {
-  background-image: url('./modules/img/13n.jpg');
+  background-image: url('./modules/img/13n.jpeg');
 }
 
 .wind-night {
-  background-image: url('./modules/img/50n.jpg');
+  background-image: url('./modules/img/50n.jpeg');
 }
 
 .form {
@@ -137,6 +137,10 @@ button {
   text-align: center;
 }
 
+.other-info-icon {
+  font-size: 20px;
+}
+
 .weather-icon {
   width: 100px;
 }
@@ -158,7 +162,7 @@ button {
 
 .other-info {
   display: none;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 260px;
   background-color: rgba(255, 255, 255, 0.473);
   border-radius: 10px;
@@ -168,6 +172,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px 0  20px 0;
 }
 
 .icon-small {
@@ -176,8 +181,9 @@ button {
 
 .div-number {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 20px;
+  border-bottom: 0.5ps solid rgba(255, 255, 255, 0.506);
 }
 
 .div-temp {

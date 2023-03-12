@@ -31,17 +31,17 @@ const renderHours = (days) => {
     // iterate over the values for the day and display them
     values.forEach((value) => {
       const icon = iconsProcessor(value.icon);
-      const tempParagraph = document.createElement('p');
-      tempParagraph.textContent = `${value.temp}°C`;
-      divTemp.appendChild(tempParagraph);
+       const timeParagraph = document.createElement("p");
+       timeParagraph.textContent = `${value.time}`;
+       divTime.appendChild(timeParagraph);
       const iconDiv = document.createElement('img');
       iconDiv.classList.add('icon-hour');
       iconDiv.src = icon;
       divImg.appendChild(iconDiv);
-
-      const timeParagraph = document.createElement('p');
-      timeParagraph.textContent = `${value.time}`;
-      divTime.appendChild(timeParagraph);
+      const tempParagraph = document.createElement("p");
+      tempParagraph.textContent = `${value.temp}°C`;
+      divTemp.appendChild(tempParagraph);
+     
     });
   });
 };
