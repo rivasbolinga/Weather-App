@@ -187,6 +187,7 @@ npm run deploy
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 Photo by Johannes Plenio: https://www.pexels.com/photo/island-during-golden-hour-and-upcoming-storm-1118873/
+
 Photo by Pixabay: https://www.pexels.com/photo/beautiful-clouds-cloudy-dramatic-209831/
 
 Photo by eberhard grossgasteiger: https://www.pexels.com/photo/down-angle-photography-of-red-clouds-and-blue-sky-844297/
