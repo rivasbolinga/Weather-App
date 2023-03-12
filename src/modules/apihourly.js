@@ -3,12 +3,15 @@ import iconsProcessor from './icons.js';
 
 const { parseISO, format } = require('date-fns'); // eslint-disable-line
 const hoursSection = document.querySelector('.hour-section');
-// -- 3. Render all the data
+
 const renderHours = (days) => {
   hoursSection.innerHTML = '';
-  Object.entries(days).forEach(([day, values]) => {
+  Object.entries(days).forEach(([day, values], index) => {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
+    if (index === 0) {
+      dayDiv.classList.add('active');
+    }
     hoursSection.appendChild(dayDiv);
     // create a heading for the day
     const dayHeading = document.createElement('h2');
@@ -31,20 +34,36 @@ const renderHours = (days) => {
     // iterate over the values for the day and display them
     values.forEach((value) => {
       const icon = iconsProcessor(value.icon);
-      const tempParagraph = document.createElement('p');
-      tempParagraph.textContent = `${value.temp}°C`;
-      divTemp.appendChild(tempParagraph);
+      const timeParagraph = document.createElement('p');
+      timeParagraph.textContent = `${value.time}`;
+      divTime.appendChild(timeParagraph);
       const iconDiv = document.createElement('img');
       iconDiv.classList.add('icon-hour');
       iconDiv.src = icon;
       divImg.appendChild(iconDiv);
-
-      const timeParagraph = document.createElement('p');
-      timeParagraph.textContent = `${value.time}`;
-      divTime.appendChild(timeParagraph);
+      const tempParagraph = document.createElement('p');
+      tempParagraph.textContent = `${value.temp}°C`;
+      divTemp.appendChild(tempParagraph);
     });
   });
+
+  if (window.innerWidth < 768) {
+    const dayDivs = document.querySelectorAll('.day');
+    const slideButton = document.getElementById('slide-button');
+    slideButton.style.display = 'flex';
+    let currentDayIndex = 0;
+    slideButton.addEventListener('click', () => {
+      dayDivs[currentDayIndex].classList.remove('active');
+      if (currentDayIndex === dayDivs.length - 1) {
+        currentDayIndex = 0;
+      } else {
+        currentDayIndex += 1;
+      }
+      dayDivs[currentDayIndex].classList.add('active');
+    });
+  }
 };
+
 // --2. transform the string received to display it later
 const transformData = (list) => {
   const daysByWeekday = {}; // create an empty object to store days by weekday

@@ -7,27 +7,41 @@ const otherInfo = document.querySelector('.other-info');
 const mainWeather = document.querySelector('.main-weather');
 
 const renderData = async (weather) => {
+  otherInfo.style.display = 'grid';
+  mainWeather.style.display = 'flex';
   const icon = iconsProcessor(weather.icon);
   pictureProcessor(weather.icon);
   let html = '';
   let html2 = '';
   html += `<div class="feels-like container">
-<div class="other-info-icon"></div>
-<p class="other-info-title">Feels Like</p>
-<p class="other-info-number">${weather.feel}°C</p>
+<div class="other-info-icon">
+<i class="fa-solid fa-temperature-three-quarters"></i>
+</div>
+<div>
+ <p class="other-info-title">Feels Like</p>
+ <p class="other-info-number">${weather.feel}°C</p>
+</div>
 </div>
 <div class="humidity container">
-<div class="other-info-icon"></div>
+<div class="other-info-icon">
+<i class="fa-solid fa-droplet"></i>
+</div>
+<div>
 <p class="other-info-title">Humidity</p>
 <p class="other-info-number">${weather.humidity}%</p>
+</div>
 </div>
 <div class="precipitations container">
 <img class="icon-small" src="${icon}">
 </div>
 <div class="wind-speed container">
-<div class="other-info-icon"></div>
+<div class="other-info-icon">
+<i class="fa-solid fa-wind"></i></div>
+<div>
 <p class="other-info-title">Wind Speed</p>
 <p class="other-info-number">${weather.wind} km/h</p>
+</div>
+
 </div>`;
   html2 += `<div class="weather-icon-container">
 <img class="weather-icon" src="${icon}">

@@ -6,7 +6,7 @@ const locationInput = document.querySelector('.location-input');
 const searchBtn = document.querySelector('.search-btn');
 // -- Call the API with the city string to get the coord. city name and country code.
 const getGeo = async (location) => {
-  const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=5157c507d51ade4731309623a34583e2`);
+  const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=5157c507d51ade4731309623a34583e2`);
   const data = await response.json();
   const coordinates = data[0];
   const city = data[0].name;
