@@ -89,18 +89,14 @@ git clone https://github.com/rivasbolinga/Weather-App.git
 npm install -g webpack
 ```
 
-```
-npm install -g webpack-cli
-```
-
-- [ ] Project dependencies
+- [ ] Install style linters
 
 ```
  npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
           [ -f .stylelintrc.json ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/html-css-js/.stylelintrc.json
 ```
 
-- [ ] Install hint linter
+- [ ] Install hint linters
 
 ```
 npm install --save-dev hint@7.x
