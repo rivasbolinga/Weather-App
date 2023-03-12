@@ -255,17 +255,21 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     padding: 0;
     margin: 60px 0 60px 0;
   }
 
   .day {
+    display: flex;
     width: 120px;
     border-right: 0.4px solid white;
     font-size: 13px;
     padding: 10px 0 20px 0;
   }
+  .day:not(:first-of-type) {
+  display: flex;
+}
 
   .div-number {
     gap: 5px;
