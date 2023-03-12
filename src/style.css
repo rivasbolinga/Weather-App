@@ -267,9 +267,10 @@ button {
     font-size: 13px;
     padding: 10px 0 20px 0;
   }
+
   .day:not(:first-of-type) {
-  display: flex;
-}
+    display: flex;
+  }
 
   .div-number {
     gap: 5px;
