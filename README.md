@@ -5,7 +5,7 @@
 
 
 
-# 🌞 [ Wheather App ] <a name="about-project"></a>
+# 🌞  Wheather App  <a name="about-project"></a>
 
  <a name="about-project"></a>
 
@@ -21,21 +21,18 @@
 
 <a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="55" height="55"/></a><a href="https://www.w3schools.com/css/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="55" height="55"/></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="55" height="55"/></a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-<img align="center" src="https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg" alt="react" width="60" height="60"/></a>
-
 
 <!-- Features -->
 ### Key Features <a name="key-features"></a>
 
 <!-- > Describe between 1-3 key features of the application.-->
 
-- [ ] **[First API call to get the Coordinates from the city name]**
-- [ ] **[Second API call to get weather information from the coordinates received in the first call]**
-- [ ] **[Third API call to get the weather for 5 days]**
-- [ ] **[Display all the weather data of the city selected]**
-- [ ] **[Totally responsive]**
-- [ ] **[Next day button to slide the days for mobile version]**
+- [ ] **First API call to get the Coordinates from the city name**
+- [ ] **Second API call to get weather information from the coordinates received in the first call**
+- [ ] **Third API call to get the weather for 5 days**
+- [ ] **Display all the weather data of the city selected**
+- [ ] **Totally responsive**
+- [ ] **Next day button to slide the days for mobile version**
 
 
 
