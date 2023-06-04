@@ -10,7 +10,7 @@
  <a name="about-project"></a>
 
 <!-- PROJECT DESCRIPTION -->
-**[Weather app]** is a website built vanilla JS where you can find the weather of your city through the API  
+**Weather app** is a website built vanilla JS where you can find the weather of your city through the API  
 [OpenWeather](https://openweathermap.org/api)
 
 </div>
