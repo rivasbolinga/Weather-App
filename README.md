@@ -173,8 +173,8 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[back button when you pass one day]**
-- [ ] **[Navbar ]**
+- [ ] **Go back button for days**
+- [ ] **Add a navigation var**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
